@@ -1,0 +1,36 @@
+seed: 31
+device: cuda
+mode: train
+best_path: null
+debug: false
+
+data_dir: data
+dataset: NYCTaxi
+input_length: 35
+batch_size: 32
+test_batch_size: 32
+graph_file: data/NYCTaxi/adj_mx.npz
+
+d_input: 2
+d_output: 2
+d_model: 64
+dropout: 0.15
+percent: 0.1
+prototype_temperature: 0.6
+prototype_count: 16
+yita: 0.5
+
+epochs: 100
+lr_init: 0.0005
+early_stop: true
+early_stop_patience: 20
+grad_norm: true
+max_grad_norm: 5
+use_dwa: true
+temp: 3
+
+use_dtd: true
+use_dtr: true
+use_pca: true
+
+log_dir: experiments/NYCTaxi/configs
